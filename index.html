@@ -199,15 +199,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 							</div>
 		</section>
 		
-	<style>
-        /* Style to make all <a> elements unclickable */
-        a {
-            pointer-events: none;
-            cursor: default; /* Optional: change cursor to default */
-            text-decoration: none; /* Optional: remove underline */
-            color: inherit; /* Optional: inherit color */
-        }
-    </style>
+	
 		
 		
 		
@@ -385,47 +377,7 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
 <script type='text/javascript' src='wp-content/plugins/elementor/assets/js/frontend.minafc7.js' id='elementor-frontend-js'></script>
 <script type='text/javascript' src='wp-content/plugins/avrix-core/assets/js/avrix-core5152.js' id='avrix-core-js'></script>
 <script type='text/javascript' src='wp-content/plugins/avrix-core/assets/js/avrix-frontend5c45.js' id='avrix-frontend-script-js'></script>
-<script>$("body").css("paddingTop", $(".navbar").innerHeight());
 
-$(function () {
-  $(".navbar li a").click(function (e) {
-    "use strict";
-    e.preventDefault();
-    $("html, body").animate(
-      {
-        scrollTop: $("#" + $(this).data("scroll")).offset().top + 1,
-      },
-      1000
-    );
-  });
-
-  // Add Active Class on Navbar Link and Remove from the Siblings(if any exist!)
-
-  $(".navbar li a").click(function () {
-    // $(".navbar a").removeClass("active");
-    // $(this).addClass("active");
-
-    $(this)
-      .addClass("active")
-      .parent()
-      .siblings()
-      .find("a")
-      .removeClass("active");
-  });
-
-  // Sync Navbar Links With Sections
-
-  $(window).scroll(function () {
-    $(".block").each(function () {
-      if ($(window).scrollTop() >= $(this).offset().top) {
-        var blockId = $(this).attr("id");
-        $(".navbar a").removeClass("active");
-        $('.navbar li a[data-scroll="' + blockId + '"]').addClass("active");
-      }
-    });
-  });
-});
-</script>
 </body>
 
 <!-- Mirrored from wordpress.validthemes.net/avrix/ by HTTrack Website Copier/3.x [XR&CO'2017], Wed, 20 Mar 2024 15:49:11 GMT -->
